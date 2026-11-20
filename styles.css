@@ -1,0 +1,370 @@
+:root{
+    --bg:#f4f8ff; --bg-soft:#eaf2fe; --card:#ffffff; --ink:#13294b; --muted:#5b7296;
+    --blue:#256fcf; --blue-deep:#164a8a; --blue-mid:#3d8fe8; --blue-light:#a8d2fa; --blue-pale:#dcecfd;
+    --line:#cfe0f5; --gold:#d9a441;
+    --shadow:0 18px 45px rgba(22,74,138,.16);
+    --radius:20px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0a1526; --bg-soft:#0f2038; --card:#132a47; --ink:#eaf3ff; --muted:#a9bed9;
+      --blue:#6db1f7; --blue-deep:#a8d2fa; --blue-mid:#4f9be8; --blue-light:#2c5f9e; --blue-pale:#1b3a5f;
+      --line:#26466e; --shadow:0 18px 45px rgba(0,0,0,.45);
+    }
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Quicksand",system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+  button,input{font:inherit}
+  button{min-height:48px}
+  img{max-width:100%;display:block}
+  .petals-bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .petal-fall{position:absolute;top:-40px;border-radius:70% 4px 70% 4px;opacity:.55;animation:fall linear infinite}
+  @keyframes fall{to{transform:translateY(110vh) rotate(320deg)}}
+
+  /* ---------- CANDADO / CÓDIGO SECRETO ---------- */
+  .lock-wrap{position:relative;z-index:1;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:28px 18px}
+  .lock-card{background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);max-width:520px;width:100%;padding:38px 28px 32px;text-align:center}
+  .lock-heart{width:84px;height:84px;margin:0 auto 10px;background:var(--blue-pale);border-radius:50%;display:grid;place-items:center;animation:latido 1.8s ease-in-out infinite}
+  @keyframes latido{0%,100%{transform:scale(1)}12%{transform:scale(1.08)}24%{transform:scale(1)}36%{transform:scale(1.06)}}
+  .lock-card h1{font-family:"Cormorant Garamond",serif;font-size:2.3rem;line-height:1.1;margin:.2em 0 .15em;font-weight:700}
+  .lock-card .sub{color:var(--muted);margin:0 auto 6px;max-width:38ch}
+  .fecha-hoy{display:inline-block;margin:10px 0 2px;background:var(--bg-soft);border:1px dashed var(--blue-mid);color:var(--blue-deep);font-weight:700;border-radius:999px;padding:7px 16px;font-size:.95rem}
+  .pista{font-size:.92rem;color:var(--muted);margin:14px auto 18px;max-width:40ch}
+  .pista strong{color:var(--ink)}
+  .code-row{display:flex;gap:7px;justify-content:center;margin:6px 0 6px;flex-wrap:nowrap}
+  .code-row input{width:40px;height:54px;text-align:center;font-size:1.45rem;font-weight:700;color:var(--blue-deep);background:var(--bg-soft);border:2px solid var(--line);border-radius:12px;outline:none;caret-color:var(--blue)}
+  .code-row input:focus{border-color:var(--blue-mid);background:var(--card)}
+  .code-row .sep{align-self:center;font-weight:700;color:var(--muted);padding:0 1px}
+  @media (max-width:420px){.code-row input{width:34px;height:48px;font-size:1.25rem}.code-row{gap:5px}}
+  .shake{animation:shake .45s}
+  @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-9px)}40%{transform:translateX(9px)}60%{transform:translateX(-6px)}80%{transform:translateX(6px)}}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--blue);color:#fff;border:none;border-radius:999px;padding:13px 28px;font-weight:700;cursor:pointer;box-shadow:0 10px 24px rgba(37,111,207,.32);transition:transform .15s, background .15s;width:100%;margin-top:14px;font-size:1.02rem}
+  .btn:hover{background:var(--blue-deep)}
+  .btn:active{transform:scale(.97)}
+  .error-msg{min-height:1.5em;color:#d64545;font-weight:600;font-size:.94rem;margin:10px 0 0}
+  .lock-foot{margin-top:16px;font-family:"Great Vibes",cursive;font-size:1.55rem;color:var(--blue)}
+
+  /* ---------- CONTENIDO DESBLOQUEADO ---------- */
+  main{position:relative;z-index:1}
+  .hero{padding:56px 20px 10px;text-align:center;max-width:860px;margin:0 auto}
+  .badge7{display:inline-flex;align-items:center;gap:8px;background:var(--blue-deep);color:#fff;font-weight:700;border-radius:999px;padding:8px 18px;letter-spacing:.02em}
+  @media (prefers-color-scheme: dark){.badge7{background:var(--blue);color:#0a1526}}
+  .hero h2{font-family:"Cormorant Garamond",serif;font-size:clamp(2.4rem,7vw,4rem);line-height:1.05;margin:.35em 0 .2em;font-weight:700}
+  .hero h2 em{font-style:italic;color:var(--blue)}
+  .hero p{color:var(--muted);max-width:52ch;margin:0 auto;font-size:1.05rem}
+  .hero-photo{max-width:560px;margin:30px auto 0;border-radius:26px;overflow:hidden;box-shadow:var(--shadow);border:6px solid var(--card)}
+  .hero-photo img{width:100%;height:420px;object-fit:cover;object-position:center 30%}
+  /* Tulipanes dibujados y animados solo con código (SVG + CSS), sin fotos — ramo junto y bonito */
+  .tulip-scene{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:0;background:radial-gradient(ellipse 90% 55% at 50% 0%,#ffffff 0%,transparent 62%),linear-gradient(180deg,var(--bg-soft) 0%,var(--blue-pale) 72%,#bfe3c8 130%);overflow:hidden;padding:0 2px}
+  .tulip-scene::before{content:"✦  ·  ✦  ·  ✦";position:absolute;top:14px;left:0;right:0;text-align:center;font-size:.72rem;letter-spacing:1.1em;color:#fff;opacity:.9;text-shadow:0 0 12px var(--blue-mid);z-index:0;pointer-events:none}
+  .tulip-scene::after{content:"";position:absolute;left:-6%;right:-6%;bottom:-14px;height:34px;border-radius:50%;background:linear-gradient(180deg,#7bc47f,#4a9a5b);opacity:.9;z-index:2;box-shadow:0 -6px 18px rgba(74,154,91,.35)}
+  .tulip-scene .tulipan{position:relative;z-index:1}
+  .hero-scene{height:420px}
+  .escena-galeria{height:300px}
+  .corazones{font-size:1.3rem;letter-spacing:.5em;text-align:center;padding:22px 0 0;color:var(--blue-mid)}
+
+  section.bloque{max-width:860px;margin:0 auto;padding:44px 20px 8px}
+  .bloque h3{font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,5vw,2.5rem);text-align:center;margin:0 0 8px;font-weight:700}
+  .bloque .intro{text-align:center;color:var(--muted);max-width:52ch;margin:0 auto 26px}
+
+  /* Sobre / carta */
+  .sobre-escena{max-width:560px;margin:6px auto 0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .sobre{position:relative;width:100%;aspect-ratio:1.55;background:var(--blue-mid);border-radius:14px;box-shadow:var(--shadow);overflow:visible;margin-top:120px}
+  .sobre::before{content:"";position:absolute;inset:0;background:var(--blue);clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%);border-radius:14px;opacity:.55}
+  .carta-papel{position:absolute;left:4%;right:4%;bottom:6%;top:auto;height:88%;background:#fffdf7;color:#2b2b26;border-radius:10px;box-shadow:0 8px 22px rgba(0,0,0,.18);padding:20px 22px;transition:transform 1s cubic-bezier(.22,.9,.3,1);overflow:hidden;z-index:1}
+  @media (prefers-color-scheme: dark){.carta-papel{background:#f7f2e4}}
+  .carta-papel .mini{font-family:"Great Vibes",cursive;font-size:1.7rem;color:#256fcf;margin:0}
+  .carta-papel .linea{height:8px;border-radius:99px;background:#e8e2cf;margin-top:12px}
+  .carta-papel .linea.corta{width:62%}
+  .solapa{position:absolute;left:0;right:0;top:0;height:52%;background:var(--blue-deep);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:14px 14px 0 0;transform-origin:top center;transition:transform .7s ease;z-index:3}
+  @media (prefers-color-scheme: dark){.solapa{background:#2c5f9e}}
+  .sello{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:var(--gold);display:grid;place-items:center;z-index:4;box-shadow:0 6px 16px rgba(0,0,0,.25);transition:opacity .4s}
+  .sobre-escena.abierto .solapa{transform:rotateX(180deg);z-index:0}
+  .sobre-escena.abierto .sello{opacity:0}
+  .sobre-escena.abierto .carta-papel{transform:translateY(-46%)}
+  .toca{ text-align:center;color:var(--muted);font-weight:600;margin-top:16px}
+  .carta-completa{display:none;max-width:640px;margin:26px auto 0;background:#fffdf7;color:#2f2c24;border-radius:18px;box-shadow:var(--shadow);padding:34px 30px;border:1px solid #eee3c8}
+  @media (prefers-color-scheme: dark){.carta-completa{background:#f7f2e4}}
+  .carta-completa.visible{display:block;animation:sube .7s ease both}
+  @keyframes sube{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .carta-completa h4{font-family:"Great Vibes",cursive;font-size:2.2rem;color:#256fcf;margin:0 0 10px;font-weight:400}
+  .carta-completa p{margin:0 0 14px;font-size:1.03rem}
+  .carta-completa .firma{font-family:"Great Vibes",cursive;font-size:1.9rem;color:#256fcf;text-align:right;margin:6px 0 0}
+  .carta-completa .ps{font-size:.92rem;color:#7a7462;border-top:1px dashed #ddd2ae;padding-top:12px}
+
+  /* 7 razones */
+  .razones{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;list-style:none;margin:0;padding:0}
+  .razones li{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px}
+  .razones .num{width:38px;height:38px;border-radius:50%;background:var(--blue-pale);color:var(--blue-deep);display:grid;place-items:center;font-weight:700;font-family:"Cormorant Garamond",serif;font-size:1.25rem;margin-bottom:10px}
+  .razones strong{display:block;margin-bottom:4px;font-size:1.02rem}
+  .razones span{color:var(--muted);font-size:.94rem}
+
+  /* Galería */
+  .galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  figure.foto{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 22px rgba(22,74,138,.10)}
+  figure.foto img{width:100%;height:300px;object-fit:cover}
+  figure.foto figcaption{padding:13px 16px;font-size:.94rem;color:var(--muted);text-align:center}
+  figure.foto figcaption strong{color:var(--ink);display:block}
+
+  /* Recuerdos y promesas de nuestros siete meses */
+  .recuerdos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+  .recuerdo-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 22px rgba(22,74,138,.08)}
+  .recuerdo-card .emoji{font-size:1.8rem;display:block;margin-bottom:8px}
+  .recuerdo-card h4{font-family:"Cormorant Garamond",serif;font-size:1.35rem;margin:0 0 5px}
+  .recuerdo-card p{color:var(--muted);margin:0;font-size:.95rem}
+  .promesas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+  .promesa{min-height:145px;border:1px solid var(--line);border-radius:18px;background:var(--card);color:var(--ink);padding:18px;text-align:left;cursor:pointer;box-shadow:0 8px 20px rgba(22,74,138,.08);transition:transform .2s,border-color .2s}
+  .promesa:hover{transform:translateY(-3px);border-color:var(--blue-mid)}
+  .promesa .numero{display:block;color:var(--blue);font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:700}
+  .promesa .texto-promesa{display:block;margin-top:7px;font-weight:600}
+  .promesa .detalle-promesa{display:none;color:var(--muted);font-size:.92rem;margin-top:8px}
+  .promesa.revelada .detalle-promesa{display:block;animation:sube .35s ease both}
+  .secreto-final{max-width:650px;margin:22px auto 0;text-align:center}
+  .secreto-final .mensaje-secreto{display:none;margin-top:18px;padding:24px;border-radius:18px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}
+  .secreto-final .mensaje-secreto.visible{display:block;animation:sube .6s ease both}
+  .secreto-final .mensaje-secreto p{margin:0;color:var(--muted)}
+  .secreto-final .mensaje-secreto strong{color:var(--blue-deep)}
+  @media(max-width:480px){.carta-completa{padding:25px 20px}.recuerdo-card{padding:17px}}
+
+  /* Tulipanes */
+  .jardin-seccion{text-align:center;padding-bottom:70px}
+  .btn-tulipanes{background:var(--blue-deep);font-size:1.12rem;padding:16px 32px;width:auto;margin-top:6px}
+  @media (prefers-color-scheme: dark){.btn-tulipanes{background:var(--blue);color:#0a1526}}
+  .jardin{position:relative;max-width:560px;margin:34px auto 0;height:340px;display:none;align-items:flex-end;justify-content:center;gap:0;padding:0}
+  .jardin.visible{display:flex}
+  .jardin::after{content:"";position:absolute;left:-2%;right:-2%;bottom:-10px;height:28px;border-radius:50%;background:linear-gradient(180deg,#7bc47f,#4a9a5b);box-shadow:0 -6px 18px rgba(74,154,91,.3);z-index:2}
+  .jardin::before{content:"";position:absolute;inset:18% 4% 0;border-radius:50%;background:radial-gradient(ellipse at center,rgba(168,210,250,.55),transparent 68%);z-index:0;pointer-events:none}
+  /* Más juntos: se traslapan como un ramo, no separados */
+  .tulipan{flex:0 1 86px;max-width:86px;margin:0 -17px;display:flex;flex-direction:column;align-items:center;transform-origin:bottom center;animation:crece 1.1s cubic-bezier(.2,.8,.3,1.2) both, mecer 3.8s ease-in-out 1.2s infinite alternate;filter:drop-shadow(0 8px 10px rgba(22,74,138,.20));cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;position:relative}
+  .tulipan::after{content:"";position:absolute;inset:6% 2% 52% 2%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,255,255,.0),transparent 70%);opacity:0;transition:opacity .25s;pointer-events:none}
+  .tulipan:hover::after,.tulipan:focus-visible::after{opacity:1;background:radial-gradient(ellipse at center,rgba(255,255,255,.35),transparent 70%)}
+  .tulipan:hover svg{filter:brightness(1.08) saturate(1.12)}
+  .tulipan:focus-visible{outline:2px dashed var(--blue-mid);outline-offset:2px;border-radius:999px}
+  .tulip-scene .tulipan{flex-basis:78px;max-width:78px;margin:0 -15px}
+  .hero-scene .tulipan{flex-basis:92px;max-width:92px;margin:0 -18px}
+  .escena-galeria .tulipan{flex-basis:70px;max-width:70px;margin:0 -14px}
+  @keyframes crece{from{transform:scaleY(0) scaleX(.35) translateY(10px);opacity:0}to{transform:scaleY(1) scaleX(1) translateY(0);opacity:1}}
+  @keyframes mecer{from{rotate:-3deg}to{rotate:3deg}}
+  .tulipan svg{width:118%;max-width:none;height:auto;display:block;overflow:visible;transition:transform .35s cubic-bezier(.2,.9,.3,1.4), filter .25s}
+  /* Al tocarlo: florece — se abre, crece y brilla */
+  .tulipan.tocado svg{animation:florece .72s cubic-bezier(.2,.9,.3,1.3) both}
+  .tulipan.tocado{filter:drop-shadow(0 10px 18px rgba(37,111,207,.45)) brightness(1.1)}
+  @keyframes florece{0%{transform:scale(1)}28%{transform:scale(1.16) translateY(-6px) rotate(-1.5deg)}52%{transform:scale(1.22) translateY(-9px)}72%{transform:scale(1.08) translateY(-3px)}100%{transform:scale(1.06) translateY(-2px)}}
+  .tulipan.ya-tocado svg{transform:scale(1.05)}
+  /* Pétalos y destellos que suelta al tocarlo */
+  .petalo-burst{position:fixed;z-index:60;pointer-events:none;border-radius:70% 4px 70% 4px;box-shadow:inset 0 0 6px rgba(255,255,255,.7);animation:petaloVuela 1.15s cubic-bezier(.2,.7,.3,1) forwards}
+  @keyframes petaloVuela{0%{transform:translate(0,0) rotate(0deg) scale(.6);opacity:1}100%{transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(1.05);opacity:0}}
+  .destello{position:fixed;z-index:60;pointer-events:none;color:#fff;text-shadow:0 0 10px var(--blue-mid),0 0 18px #fff;font-size:18px;animation:destelloUp 1s ease-out forwards}
+  @keyframes destelloUp{0%{transform:translate(0,0) scale(.5);opacity:0}25%{opacity:1}100%{transform:translate(var(--dx),-72px) scale(1.25);opacity:0}}
+  /* Pista y frase que aparece al tocar */
+  .toca-hint{display:inline-flex;align-items:center;gap:7px;margin-top:14px;background:var(--card);border:1px solid var(--line);color:var(--blue-deep);font-weight:700;font-size:.92rem;border-radius:999px;padding:8px 16px;box-shadow:0 6px 16px rgba(22,74,138,.10);animation:latidoSuave 2.2s ease-in-out infinite}
+  @keyframes latidoSuave{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+  .toca-hint .dedito{font-size:1.05rem}
+  .frase-flotante{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);z-index:70;max-width:min(92vw,480px);background:var(--blue-deep);color:#fff;font-weight:700;text-align:center;padding:13px 20px;border-radius:999px;box-shadow:0 14px 32px rgba(0,0,0,.28);opacity:0;pointer-events:none;transition:opacity .35s, transform .35s;font-size:.98rem;line-height:1.35}
+  @media (prefers-color-scheme: dark){.frase-flotante{background:var(--blue);color:#0a1526}}
+  .frase-flotante.visible{opacity:1;transform:translateX(-50%) translateY(0)}
+  .frase-flotante small{display:block;font-weight:600;opacity:.85;font-size:.82rem;margin-top:2px}
+  .contador-wrap{margin-top:16px;display:none;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+  .contador-wrap.visible{display:flex}
+  .contador-pill{background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-weight:700;color:var(--blue-deep);font-size:.92rem}
+  .contador-corazones{letter-spacing:.18em;color:var(--blue-mid);font-size:1rem;min-height:1.2em}
+  .mensaje-tulipanes{display:none;max-width:560px;margin:30px auto 0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;box-shadow:var(--shadow)}
+  .mensaje-tulipanes.visible{display:block;animation:sube .7s ease both}
+  .mensaje-tulipanes .grande{font-family:"Great Vibes",cursive;font-size:2.1rem;color:var(--blue);margin:0 0 6px;line-height:1.2}
+  .mensaje-tulipanes p{margin:0;color:var(--muted)}
+  .burst{position:fixed;z-index:50;pointer-events:none;font-size:22px;animation:burstUp 1.4s ease-out forwards}
+  @keyframes burstUp{to{transform:translate(var(--dx),-190px) rotate(40deg) scale(1.3);opacity:0}}
+  footer{position:relative;z-index:1;text-align:center;padding:14px 20px 44px;color:var(--muted)}
+  footer .firma-fin{font-family:"Great Vibes",cursive;font-size:2rem;color:var(--blue);margin:0}
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.001s !important;transition-duration:.001s !important}
+    html{scroll-behavior:auto}
+  }
+
+
+/* ===== TARJETAS DE RECUERDOS ===== */
+
+#recuerdos .recuerdo {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
+    gap: 8px 14px;
+
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(140, 170, 220, 0.16);
+    border-radius: 18px;
+
+    padding: 22px;
+    margin: 22px 0;
+
+    transition: transform 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+}
+
+#recuerdos .recuerdo:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.075);
+    border-color: rgba(160, 190, 255, 0.4);
+}
+
+#recuerdos .recuerdo .emoji {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: center;
+
+    font-size: 2rem;
+    margin: 0;
+}
+
+#recuerdos .recuerdo h4 {
+    grid-column: 2;
+    grid-row: 1;
+
+    margin: 0;
+    font-size: 1.12rem;
+    color: #e4edff;
+}
+
+#recuerdos .recuerdo p {
+    grid-column: 2;
+    grid-row: 2;
+
+    margin: 0;
+    line-height: 1.8;
+    color: #cbd5e5;
+    font-size: 1rem;
+}
+
+#recuerdos .intro {
+    line-height: 1.8;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    #recuerdos .recuerdo {
+        grid-template-columns: 38px 1fr;
+        gap: 8px 10px;
+        padding: 16px;
+        margin: 16px 0;
+    }
+
+    #recuerdos .recuerdo .emoji {
+        font-size: 1.6rem;
+    }
+
+    #recuerdos .recuerdo h4 {
+        font-size: 1rem;
+    }
+
+    #recuerdos .recuerdo p {
+        font-size: 0.92rem;
+    }
+}
+
+
+/* ===== SIETE PROMESAS ===== */
+
+.promesas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 28px 0;
+}
+
+.promesa-card {
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(145, 175, 230, 0.2);
+    border-radius: 17px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.promesa-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.075);
+    border-color: rgba(170, 190, 255, 0.45);
+}
+
+.promesa-card summary {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 20px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.promesa-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.promesa-num {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #91aef5;
+}
+
+.promesa-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.promesa-info strong {
+    color: #e5edff;
+    font-size: 1rem;
+}
+
+.promesa-info span {
+    color: #b9c7dd;
+    font-size: 0.88rem;
+}
+
+.promesa-icon {
+    color: #a9bdf5;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.promesa-card[open] .promesa-icon {
+    transform: rotate(45deg);
+}
+
+.promesa-mensaje {
+    padding: 0 20px 20px 55px;
+    color: #cbd6e8;
+    font-size: 0.94rem;
+    line-height: 1.8;
+    animation: aparecerPromesa 0.35s ease;
+}
+
+@keyframes aparecerPromesa {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 650px) {
+    .promesas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promesa-card summary {
+        padding: 17px;
+    }
+
+    .promesa-mensaje {
+        padding: 0 17px 18px 48px;
+    }
+}

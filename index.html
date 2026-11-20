@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Para mi novia — 7 meses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="petals-bg" id="petalsBg" aria-hidden="true"></div>
+<div class="lock-wrap" id="lockScreen">
+  <div class="lock-card" id="lockCard">
+    <div class="lock-heart" aria-hidden="true">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.6 5 6.1 5c2 0 3.4 1.1 4.2 2.4h3.4C14.5 6.1 15.9 5 17.9 5c3.5 0 5.5 3.6 3.9 6.8C19.5 16.1 12 21 12 21Z" fill="#256fcf" opacity=".18"/><path d="M7.5 12.2V10a4.5 4.5 0 0 1 9 0v2.2" stroke="#164a8a" stroke-width="1.8"/><rect x="5.4" y="12" width="13.2" height="8.2" rx="2.2" fill="#256fcf"/><circle cx="12" cy="15.6" r="1.7" fill="#fff"/><path d="M12 16.9v1.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </div>
+    <h1>Esto es solo para ti</h1>
+    <p class="sub">Guardé una pagina muy bonita y muchos sentimientos detrás de este candado, porque hoy es un día especial para nosotros.</p>
+    <div><span class="fecha-hoy">20 de noviembre de 2026 · Cumplimos 7 meses</span></div>
+    <p class="pista">Ingresa el <strong>código secreto</strong>:<br>es la <strong>fecha de hoy</strong>, sin espacios ni guiones.<br>Ejemplo de formato: <strong>día / mes / año</strong></p>
+
+    <form id="codeForm" autocomplete="off">
+      <div class="code-row" id="codeRow" role="group" aria-label="Código secreto de 8 dígitos">
+        <input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 1">
+        <input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 2">
+        <span class="sep">/</span>
+        <input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 3">
+        <input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 4">
+        <span class="sep">/</span>
+        <input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 5">
+        <input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 6">
+        <input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 7">
+        <input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 8">
+      </div>
+      <p class="error-msg" id="errorMsg" role="alert"></p>
+      <button class="btn" type="submit">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        Desbloquear mi sorpresa
+      </button>
+    </form>
+    <p class="lock-foot">con amor, para ti</p>
+  </div>
+</div>
+
+<main id="contenido" hidden>
+
+  <header class="hero">
+    <span class="badge7">♥ &nbsp;20 · 11 · 2026 — Nuestro día</span>
+    <h2>¡Felices <em>7 meses</em>,<br>mi amor!</h2>
+    <p>Siete meses, y entre tantos días, recuerdos y momentos, hay algo que sigue siendo mi favorito: tenerte en mi vida. No sé cómo explicarte lo bonito que es coincidir contigo, pero espero que al ver cada detalle que te hago y de esto puedas sentir un poquito de todo lo que llevo en mi corazón. Lo hice pensando en ti, en tu sonrisa y en lo mucho que significas para mí. Porque tú no eres solamente parte de mi historia, eres una de las partes más bonitas de ella. 💙</p>
+    <div class="hero-photo">
+      <div class="tulip-scene hero-scene" data-count="7" data-paleta="0" role="group" aria-label="Siete tulipanes azules que se pueden tocar"></div>
+    </div>
+    <div><span class="toca-hint"><span class="dedito" aria-hidden="true">👆</span> Toca los tulipanes — florecen para ti</span></div>
+    <div class="corazones" aria-hidden="true">♥ ♥ ♥</div>
+  </header>
+
+  <section class="bloque" id="carta">
+    <h3>Una cartita para ti 💌</h3>
+    <p class="intro">Toca el sobre para abrirlo. Dentro encontrarás unas palabritas que nacen de mi corazón y que llevo tiempo queriendo decirte. Es un pequeño pedacito de todo lo que siento por ti, mi niña. ❤️</p>
+
+    <div class="sobre-escena" id="sobreEscena" role="button" tabindex="0" aria-label="Abrir el sobre de la carta">
+      <div class="sobre">
+        <div class="carta-papel" aria-hidden="true">
+          <p class="mini">Para ti, mi amor…</p>
+          <div class="linea"></div><div class="linea"></div><div class="linea corta"></div>
+          <div class="linea"></div><div class="linea corta"></div>
+        </div>
+        <div class="solapa"></div>
+        <div class="sello" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+      </div>
+    </div>
+    <p class="toca" id="tocaTexto">Toca el sobre para abrirlo ♥</p>
+
+    
+<article class="carta-completa" id="cartaCompleta">
+  <h4>Para ti, mi niña hermosa:</h4>
+  <p>Mi Jazmin, hoy cumplimos siete meses y no quería dejar pasar este día sin escribirte algo que de verdad venga de mí. Tal vez no siempre encuentre las palabras exactas para explicarte todo lo que siento, pero quiero intentarlo. Quiero que tengas un lugar al que puedas volver cuando quieras recordar lo mucho que te amo y lo importante que eres para mí.</p>
+  <p>A veces me pongo a pensar en cómo empezó todo, en aquel momento en el que todavía no imaginaba todo lo que llegarías a significar para mí. Y mira dónde estamos ahora: compartiendo días, conversaciones, risas, planes, recuerdos y también momentos que nos han puesto a prueba. Qué bonito es pensar que entre tantas personas y tantos caminos, la vida hizo que coincidiéramos.</p>
+  <p>Estos siete meses me han regalado momentos que guardo con muchísimo cariño. Recuerdo nuestras salidas, las veces que hemos ido al cine, nuestras comidas, las pequeñas ocurrencias que terminan convirtiéndose en anécdotas y hasta esas partidas de Minecraft en las que simplemente disfrutamos estar juntos. Son cosas que quizá parezcan sencillas, pero para mí tienen un valor enorme porque las viví contigo.</p>
+  <p>También guardo con mucho cariño los detalles que has tenido conmigo, tu manera de hacerme sentir querido y esos momentos en los que una conversación contigo puede cambiar por completo mi día. Me gusta escucharte, conocer lo que piensas, saber qué te emociona, qué te hace reír y hasta esas pequeñas cosas que a veces te molestan. Quiero seguir descubriendo cada parte de ti, incluso las que todavía no conozco.</p>
+  <p>Quiero que sepas que no me enamora solamente tu sonrisa o lo bonita que eres. Me encanta tu forma de ser, tu inteligencia, tu carácter, tus ocurrencias, tus sueños y esa manera tan tuya de ver las cosas. Admiro a la mujer que eres y todo lo que te esfuerzas por conseguir. Espero que nunca dudes de que mereces sentirte querida, respetada, escuchada y valorada, no solamente hoy, sino todos los días.</p>
+  <p>No voy a decirte que todo ha sido perfecto, porque los dos sabemos que también hemos tenido días complicados. Hemos cometido errores y hay cosas que todavía tenemos que aprender. Pero yo no quiero que lo nuestro se quede únicamente en palabras bonitas. Quiero que podamos hablar, escucharnos, reconocer cuando nos equivocamos y hacer las cosas mejor. Quiero demostrarte con hechos que me importa lo que sientes y que cuidar nuestra relación también es una responsabilidad que quiero asumir.</p>
+  <p>Gracias por seguir compartiendo tu tiempo conmigo, por las veces que me escuchas, por tus abrazos, por tus mensajes y por permitirme formar parte de tu vida. Gracias por ser mi novia, mi amiga, mi compañera y esa personita con la que quiero compartir tanto lo extraordinario como los días más normales. No sabes cuánto valoro tenerte a mi lado.</p>
+  <p>Si pudiera pedir algo para nosotros, sería que nunca dejemos de conocernos. Que sigamos teniendo citas, inventando planes, viendo películas, riéndonos por cualquier tontería, apoyándonos en nuestros proyectos y celebrando cada pequeño logro. Quiero estar cuando tengas días increíbles y también cuando necesites un abrazo, un ratito de tranquilidad o simplemente a alguien que te escuche.</p>
+  <p>Quiero seguir construyendo recuerdos contigo. Quiero que algún día miremos hacia atrás y nos dé mucha ternura recordar cómo éramos en estos primeros meses, las cosas que nos emocionaban y todo lo que fuimos aprendiendo. Me ilusiona pensar en los próximos aniversarios, en las nuevas aventuras y en todas esas fotografías que todavía nos faltan por tomar.</p>
+  <p>Mi promesa no es que nunca tendremos dificultades, sino que quiero seguir aprendiendo a amarte de una manera bonita: con respeto, sinceridad, paciencia, detalles y acciones. Quiero que mis palabras tengan sentido porque también puedas verlas reflejadas en lo que hago. Y quiero que tú también puedas sentirte libre de decirme lo que necesitas, lo que te gusta y lo que podemos mejorar.</p>
+  <p>Felices siete meses, mi pequeña Jas. Gracias por estos siete capítulos de nuestra historia. No sé exactamente qué nos espera en cada página que viene, pero me hace feliz saber que todavía tenemos muchas por escribir. Hoy te vuelvo a elegir y espero seguir haciéndolo en cada nuevo día, cuidando esto tan bonito que estamos construyendo.</p>
+  <p>Te amo muchísimo, mi niña. Nunca olvides que eres una persona muy especial para mí y que me siento muy agradecido de haberte encontrado. Ojalá esta página te saque una sonrisa y te recuerde, aunque sea un poquito, todo el amor que hay detrás de cada detalle.</p>
+  <p class="firma">Con todo mi amor, Ulises 💙</p>
+  <p class="ps">P.D. Si llegaste hasta aquí, todavía quedan sorpresas. Sigue bajando, mi amor: preparé algunas cositas más para ti. 🌷</p>
+</article>
+
+  
+<section class="bloque">
+  <h3>Siete razones, siete meses y una sola persona: tú 💙</h3>
+  <p class="intro">Si tuviera que explicar todo lo que me hace elegirte una y otra vez, necesitaría muchísimas páginas. Pero hoy quiero regalarte siete pequeñas razones, una por cada mes que hemos compartido.</p>
+  <ol class="razones">
+    <li>
+      <span class="num">1</span>
+      <strong>Tu sonrisa</strong>
+      <span>Porque incluso en mis días más complicados, verte sonreír puede hacer que todo se sienta un poquito mejor.</span>
+    </li>
+    <li>
+      <span class="num">2</span>
+      <strong>Tu forma de ser</strong>
+      <span>Porque tienes una personalidad que me encanta, con tus ocurrencias, tu carácter y esos pequeños detalles que te hacen ser tú.</span>
+    </li>
+    <li>
+      <span class="num">3</span>
+      <strong>Tu risa</strong>
+      <span>Porque es uno de mis sonidos favoritos y siempre voy a querer encontrar nuevas razones para escucharte reír.</span>
+    </li>
+    <li>
+      <span class="num">4</span>
+      <strong>Tu corazón</strong>
+      <span>Porque admiro la manera en que quieres, sientes y te preocupas por las personas que son importantes para ti.</span>
+    </li>
+    <li>
+      <span class="num">5</span>
+      <strong>Tu compañía</strong>
+      <span>Porque contigo hasta los momentos más sencillos se convierten en recuerdos que quisiera guardar para siempre.</span>
+    </li>
+    <li>
+      <span class="num">6</span>
+      <strong>La mujer que eres</strong>
+      <span>Porque admiro tus sueños, tu inteligencia, tu esfuerzo y todas esas ganas que tienes de salir adelante. Me encanta verte crecer.</span>
+    </li>
+    <li>
+      <span class="num">7</span>
+      <strong>Simplemente tú, Jasmin</strong>
+      <span>Porque no necesito una lista para saber por qué te amo. Te elijo por quien eres, por lo que compartimos y por todo lo bonito que todavía nos falta vivir.</span>
+    </li>
+  </ol>
+  <p class="intro">Y aunque hoy solamente te escribí siete razones, quiero que sepas que podría encontrar muchas más en cada conversación, cada abrazo y cada momento a tu lado. Gracias por ser tú, mi niña hermosa. 💙</p>
+</section>
+
+<section class="bloque" id="recuerdos">
+  <h3>Pequeños recuerdos, enormes momentos 💙</h3>
+  <p class="intro">
+    A veces los momentos más bonitos no son los más grandes ni los más extraordinarios.
+    Son esos pequeños ratitos que compartimos, las risas inesperadas, las salidas,
+    las conversaciones y todas esas cosas que se vuelven especiales simplemente
+    porque las vivimos juntos. Estos son algunos recuerdos que guardo con muchísimo cariño.
+  </p>
+  <div class="recuerdo">
+    <span class="emoji">🎬</span>
+    <h4>Nuestras salidas al cine</h4>
+    <p>
+      Me encanta recordar cada película que hemos visto juntos, desde la emoción
+      de elegir qué vamos a ver hasta todos los momentos que compartimos antes y
+      después. Quiero que todavía nos falten muchísimas películas, palomitas y
+      citas de cine por disfrutar.
+    </p>
+  </div>
+  <div class="recuerdo">
+    <span class="emoji">🍔</span>
+    <h4>Nuestras pequeñas aventuras de comida</h4>
+    <p>
+      Como aquella vez que fuimos por hamburguesas a La Victoria o cuando probamos
+      ese ramen con Cheetos. Son recuerdos que quizá parezcan sencillos, pero que
+      me hacen sonreír porque los compartí contigo. Espero que nos falten muchos
+      lugares por conocer y muchas cosas ricas por probar juntos.
+    </p>
+  </div>
+  <div class="recuerdo">
+    <span class="emoji">🕹️</span>
+    <h4>Nuestro mundo de Minecraft</h4>
+    <p>
+      Desde aquella primera vez que jugamos juntos, Minecraft se convirtió en
+      otro lugar donde podemos compartir tiempo, construir cosas, explorar y
+      hacer cualquier tontería. Me gusta que incluso desde una pantalla podamos
+      crear recuerdos tan bonitos. Lo mejor siempre será tenerte conmigo en ese mundo.
+    </p>
+  </div>
+  <div class="recuerdo">
+    <span class="emoji">🕷️</span>
+    <h4>Nuestra historia de Spider-Man</h4>
+    <p>
+      No podía faltar uno de nuestros momentos de película. Me encanta recordar
+      todo lo que hemos compartido alrededor de Spider-Man, nuestros detalles y
+      esa bonita idea de tener nuestros outfits de Miles y Gwen. Son esas pequeñas
+      cosas que hacen que nuestra historia tenga recuerdos únicos.
+    </p>
+  </div>
+  <div class="recuerdo">
+    <span class="emoji">💌</span>
+    <h4>Cada detalle que has tenido conmigo</h4>
+    <p>
+      Tus cartas, tus dibujos, tus pulseras, tus regalos, tus palabras y todas
+      esas pequeñas sorpresas que me has dado. No sabes lo mucho que valoro cada
+      una de ellas. Las guardo porque vienen de ti y porque detrás de cada detalle
+      puedo sentir el cariño que has puesto en él.
+    </p>
+  </div>
+  <div class="recuerdo">
+    <span class="emoji">🫂</span>
+    <h4>Cuando me haces sentir en casa</h4>
+    <p>
+      También recuerdo esos momentos en los que no necesito hacer nada especial,
+      porque simplemente estar contigo es suficiente. Tus abrazos, tus palabras
+      y la tranquilidad que encuentro cuando estamos juntos son cosas que valoro
+      muchísimo. Gracias por acompañarme y por hacerme sentir querido.
+    </p>
+  </div>
+  <div class="recuerdo">
+    <span class="emoji">🌷</span>
+    <h4>Todo lo que todavía nos falta vivir</h4>
+    <p>
+      Y aunque ya tenemos recuerdos muy bonitos, sé que todavía nos esperan
+      muchísimas primeras veces, nuevas salidas, fotografías, películas,
+      aventuras y momentos que aún no imaginamos. Me emociona pensar en todo
+      lo que podemos seguir construyendo juntos.
+    </p>
+  </div>
+  <p class="intro">
+    Si algo tengo claro después de estos siete meses, es que mis recuerdos
+    favoritos tienen algo en común: tú estás en ellos. Y si pudiera volver
+    a vivir cada uno, volvería a elegir compartirlos contigo.
+    Gracias por formar parte de mi vida, mi niña hermosa. Te amo muchísimo. 💙
+  </p>
+</section>
+
+  
+<section class="bloque" id="promesas">
+  <h3>Siete promesas para ti 💙</h3>
+  <p class="intro">
+    Una por cada mes que llevamos juntos. No quiero que sean solamente
+    palabras bonitas, quiero que sean cosas que pueda demostrarte con
+    mis acciones, todos los días. Toca cada una para descubrirla.
+  </p>
+  <div class="promesas-grid">
+    <details class="promesa-card">
+      <summary>
+        <span class="promesa-num">01</span>
+        <span class="promesa-info">
+          <strong>Siempre</strong>
+          <span>Escucharte de verdad</span>
+        </span>
+        <span class="promesa-icon">♡</span>
+      </summary>
+      <div class="promesa-mensaje">
+        Prometo escucharte con atención, interesarme por lo que sientes
+        y darte un espacio donde puedas hablar conmigo sin miedo a ser juzgada.
+        Quiero que sepas que tu voz siempre importa para mí.
+      </div>
+    </details>
+    <details class="promesa-card">
+      <summary>
+        <span class="promesa-num">02</span>
+        <span class="promesa-info">
+          <strong>Cada día</strong>
+          <span>Demostrarte mi cariño</span>
+        </span>
+        <span class="promesa-icon">♡</span>
+      </summary>
+      <div class="promesa-mensaje">
+        Prometo no dejar que el cariño se quede solamente en palabras.
+        Quiero demostrarte cuánto te amo con mis detalles, mi tiempo,
+        mi atención y mi manera de tratarte.
+      </div>
+    </details>
+    <details class="promesa-card">
+      <summary>
+        <span class="promesa-num">03</span>
+        <span class="promesa-info">
+          <strong>Con respeto</strong>
+          <span>Cuidar lo que tenemos</span>
+        </span>
+        <span class="promesa-icon">♡</span>
+      </summary>
+      <div class="promesa-mensaje">
+        Prometo respetarte, cuidar tus sentimientos y tomar en serio
+        aquello que te hace sentir bien o que puede lastimarte.
+        Quiero que nuestra relación sea un lugar seguro para los dos.
+      </div>
+    </details>
+    <details class="promesa-card">
+      <summary>
+        <span class="promesa-num">04</span>
+        <span class="promesa-info">
+          <strong>En equipo</strong>
+          <span>Apoyar tus sueños</span>
+        </span>
+        <span class="promesa-icon">♡</span>
+      </summary>
+      <div class="promesa-mensaje">
+        Prometo alegrarme por tus logros, acompañarte en tus proyectos
+        y apoyarte cuando las cosas se pongan difíciles.
+        Quiero verte cumplir cada una de tus metas, mi futura criminóloga.
+      </div>
+    </details>
+    <details class="promesa-card">
+      <summary>
+        <span class="promesa-num">05</span>
+        <span class="promesa-info">
+          <strong>Con sinceridad</strong>
+          <span>Hablar siempre con la verdad</span>
+        </span>
+        <span class="promesa-icon">♡</span>
+      </summary>
+      <div class="promesa-mensaje">
+        Prometo ser honesto contigo, hablar de lo que me pasa y no esconder
+        las cosas que debemos conversar. Sé que la confianza se construye
+        con hechos y quiero demostrarte que puedes contar conmigo.
+      </div>
+    </details>
+    <details class="promesa-card">
+      <summary>
+        <span class="promesa-num">06</span>
+        <span class="promesa-info">
+          <strong>Muchas veces</strong>
+          <span>Seguir creando recuerdos</span>
+        </span>
+        <span class="promesa-icon">♡</span>
+      </summary>
+      <div class="promesa-mensaje">
+        Prometo seguir invitándote a salir, ver películas contigo,
+        jugar Minecraft, conocer lugares nuevos, tomarnos fotografías
+        y encontrar cualquier excusa para pasar tiempo juntos.
+      </div>
+    </details>
+    <details class="promesa-card">
+      <summary>
+        <span class="promesa-num">07</span>
+        <span class="promesa-info">
+          <strong>De corazón</strong>
+          <span>Seguir eligiéndote</span>
+        </span>
+        <span class="promesa-icon">♡</span>
+      </summary>
+      <div class="promesa-mensaje">
+        Prometo seguir eligiendo nuestra relación, aprender de mis errores
+        y trabajar para ser una mejor pareja. No puedo prometerte una historia
+        sin dificultades, pero sí que quiero construir contigo una historia
+        llena de amor, respeto, sinceridad y momentos felices.
+      </div>
+    </details>
+  </div>
+  <p class="intro">
+    Estas son mis siete promesas para ti, Jasmin. No quiero que tengas
+    que recordarme lo que escribí aquí; quiero que con el tiempo puedas
+    ver cada una reflejada en la manera en que te amo. Te amo, mi niña. 💙
+  </p>
+</section>
+
+
+  <section class="bloque secreto-final" id="secreto">
+    <h3>Una última cosita, mi amor…</h3>
+    <p class="intro">Antes de terminar, quiero dejarte un mensaje que también es solo para ti.</p>
+    <button class="btn" id="btnSecreto" type="button">Abrir mi último secreto 💙</button>
+    <div class="mensaje-secreto" id="mensajeSecreto">
+      <p><strong>Si pudiera volver al día en que te conocí, volvería a acercarme a ti.</strong> Porque entre tantas casualidades, encontrarte ha sido una de las cosas más bonitas que me han pasado. Gracias por estos siete meses, Jasmin. Mi lugar favorito sigue siendo donde puedo compartir un momento contigo. Te amo. 💙</p>
+    </div>
+  </section>
+
+  <section class="bloque jardin-seccion">
+    <h3>Y ahora, lo prometido</h3>
+    <p class="intro">No te puedo dar flores que duren para siempre… o sí. Estas no se marchitan. <strong>Y estos sí se pueden tocar:</strong> cada tulipán que toques va a florecer más y soltar corazones y pétalos para ti.</p>
+    <button class="btn btn-tulipanes" id="btnTulipanes" type="button">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c-.6-3.5-.5-6.8.3-10.2C9.8 13 8 15.6 7.7 19 5.4 17.4 4.4 14.7 5 11.8c2.2.4 4 1.5 5.3 3.2C10 11.5 10.6 8 12 4c1.4 4 2 7.5 1.7 11 1.3-1.7 3.1-2.8 5.3-3.2.6 2.9-.4 5.6-2.7 7.2-.3-3.4-2.1-6-4.6-7.2.8 3.4.9 6.7.3 10.2Z" transform="translate(0,-2)"/></svg>
+      Presiona aquí para tener tus tulipanes
+    </button>
+
+    <div class="jardin" id="jardin"></div>
+
+    <div class="contador-wrap" id="contadorWrap" aria-live="polite">
+      <span class="contador-pill" id="contadorTexto">Has tocado 0 de 7 tulipanes</span>
+      <span class="contador-corazones" id="contadorCorazones" aria-hidden="true"></span>
+    </div>
+    <p id="pistaJardin" style="display:none;margin-top:12px;color:var(--muted);font-weight:600">👆 Toca cada tulipán del jardín, uno por uno…</p>
+
+    <div class="mensaje-tulipanes" id="mensajeTulipanes">
+      <p class="grande">Para ti, mi amor</p>
+      <p>Son <strong>7 tulipanes azules</strong>, uno por cada mes a tu lado. Que florezcan hoy y se queden así para siempre, igual que lo que siento por ti. Felices 7 meses. 💙</p>
+    </div>
+  </section>
+
+  <div class="frase-flotante" id="fraseFlotante" role="status" aria-live="polite"></div>
+
+  <footer>
+    <p class="firma-fin">Te amo demasiado — hoy y siempre</p>
+    <p class="firma-fin">Ulises</p>
+    <p>20 de noviembre de 2026 · Nuestros 7 meses</p>
+  </footer>
+</main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
